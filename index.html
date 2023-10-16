@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recibos Pardal Portoes</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="info">
+            <div class="info-cliente">
+                <div class="input-item">
+                    <label for="cliente">Nome do Cliente:</label>
+                    <input type="text" name="cliente" id="cliente">
+                </div>
+                <div class="input-item">
+                    <label for="input-data">Data:</label>
+                    <input type="date" name="input-data" id="input-data">
+                </div>
+                <div class="input-item">
+                    <label for="ende-inst">Endereço para instalação:</label>
+                    <input type="text" name="ende-inst" id="ende-inst">
+                </div>
+            </div>
+            <div class="info-servicos">
+                <div class="input-item">
+                    <label for="desc-serv">Descrição:</label>
+                    <input type="text" name="desc-serv" id="desc-serv">
+                </div>
+                <div class="input-item">
+                    <label for="metragem">Metragem:</label>
+                    <input type="text" name="metragem" id="metragem">
+                </div>
+                <div class="input-item">
+                    <label for="valor">Valor:</label>
+                    <input type="number" name="valor" id="valor">
+                </div>
+                <button class="env-tudo">Enviar Tudo</button>
+                <button class="env-serv">Enviar Serviço</button>
+            </div>
+        </div>
+        <div class="recibo">
+            <header>
+                <img src="" alt="logo pardal portoes">
+                <div class="dados">
+                    <p class="nome-cliente"></p>
+                    <p class="data-recibo"></p>
+                    <p class="ende-recibo"></p>
+                </div>
+            </header>
+            <main>
+                <h1>Recibo</h1>
+                <table class="tabela-servicos">
+                    <tr class="title-table">
+                        <th>Item</th>
+                        <th>Descrição</th>
+                        <th>Metragem</th>
+                        <th>Valor</th>
+                    </tr>
+                </table>
+            </main>
+            <footer>
+                <p>Atenciosamente;</p>
+                <p>ROBSON DE OLIVEIRA </br>
+                    Pardal Portões</p>
+                <img src="" alt="informacoes pardal portoes">
+            </footer>
+        </div>
+    </div>
+
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
