@@ -18,13 +18,19 @@ function EnvDados() {
 
     let contador = 1;
 
+
     this.pressBtn = function () {
         document.addEventListener('click', e => {
             const el = e.target;
 
-            if (el.classList.contains('env-tudo')) {
+            if (el.classList.contains('enviar')) {
                 this.envInfoCliente(iptCliente.value, iptEnd.value);
-                this.envInfoServ(desc.value, metragem.value, valor.value);
+                this.addServ(contador ,desc.value, metragem.value, this.formtValor());
+                this.limpaServ();
+            };
+
+            if (el.classList.contains('remover')) {
+                this.rmvTr();
             };
         });
     };
@@ -33,10 +39,6 @@ function EnvDados() {
         rcbCliente.innerHTML = `Cliente: ${nome}`;
         rcbData.innerHTML = `Data: ${this.formtData()}`;
         rcbEnd.innerHTML = `Endereço para Instalação: ${end}`;
-    };
-
-    this.envInfoServ = function (desc, metragem, valor) {
-        this.addServ(desc, metragem, valor);
     };
 
     this.formtData = function () {
@@ -49,26 +51,32 @@ function EnvDados() {
         return `${diaF}/${mesF}/${anoF}`;
     };
 
-    this.criaTr = function () {
+    this.formtValor = function () {
+        const valorString = valor.value.toString();
+        const valorF = `R$ ${valorString}`;
+        return valorF;
+    };
+
+    this.addServ = function (cont, desc, metragem, valor) {
         const tr = document.createElement('tr');
-        return tr;
-    };
-
-    this.criaTd = function () {
-        const td = document.createElement('td');
-        return td;
-    };
-
-    this.addServ = function (desc, metragem, valor) {
-        const tr = this.criaTr();
         tabela.appendChild(tr);
-        const td = this.criaTd();
-        td.innerText = contador;
-        td.innerText += desc;
-        td.innerText += metragem;
-        td.innerText += valor;
-        tr.appendChild(td);
-        contador++;
+        const itens = [cont, desc, metragem, valor];
+        for (i of itens) {
+            const td = document.createElement('td');
+            td.innerText += i;
+            tr.appendChild(td);
+        }
+        contador++
+    };
+
+    this.limpaServ = function () {
+        desc.value = '';
+        metragem.value = '';
+        valor.value = '';
+    };
+
+    this.rmvTr = function () {
+        tabela.removeChild(tabela.lastChild)
     };
 }
 
