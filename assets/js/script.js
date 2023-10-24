@@ -32,6 +32,10 @@ function EnvDados() {
             if (el.classList.contains('remover')) {
                 this.rmvTr();
             };
+
+            if (el.classList.contains('baixar')) {
+                this.baixarPdf();
+            };
         });
     };
 
@@ -77,6 +81,11 @@ function EnvDados() {
 
     this.rmvTr = function () {
         tabela.removeChild(tabela.lastChild)
+    };
+
+    this.baixarPdf = function () {
+        const item = document.querySelector('.recibo');
+        html2pdf().from(item).save();
     };
 }
 
