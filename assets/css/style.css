@@ -57,6 +57,7 @@
 }
 
 .info button {
+    width: 40%;
     margin: 10px;
     border: 0;
     padding: 5px;
@@ -64,6 +65,10 @@
     border-radius: 5px;
     background-color: #424242;
     color: white;
+}
+
+p .baixar {
+    width: 90%;
 }
 
 .recibo {
