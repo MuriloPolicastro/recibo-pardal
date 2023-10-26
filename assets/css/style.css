@@ -3,7 +3,7 @@
 :root {
    --primary-color: #c90e0e;
    --secondy-color: #d1d1d1;
-   --font-primary: 'Roboto', sans-serif;
+   --font-primary: Arial, sans-serif;
 }
 
 * {
@@ -110,11 +110,12 @@ main h1 {
     border: 1px solid black;
     border-collapse: collapse;
     margin-top: 20px;
+    width: 90%;
 }
 
 .tabela-servicos th, .tabela-servicos td {
     padding: 8px;
-    min-width: 120px;
+    
     border: 1px solid black;
     text-align: center;
 }

@@ -85,7 +85,12 @@ function EnvDados() {
 
     this.baixarPdf = function () {
         const item = document.querySelector('.recibo');
-        html2pdf().from(item).save();
+        const opt = {
+            filename: iptCliente.value + 'recibo.pdf',
+            html2canvas:  { dpi: 300, scale: 5, letterRendering: true},
+            jsPDF:        { format: 'a4', orientation: 'portrait'},
+        };
+        html2pdf().set(opt).from(item).save();
     };
 }
 
