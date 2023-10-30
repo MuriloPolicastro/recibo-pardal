@@ -84,6 +84,7 @@ p .baixar {
     display: grid;
     grid-template-rows: 1fr 2fr 1fr;
     gap: 20px;
+    
 }
 header {
     padding-left: 30px;
@@ -99,7 +100,7 @@ header img {
 }
 
 main {
-    padding-left: 30px;
+    padding-left: 20px;
 }
 
 main h1 {
@@ -120,7 +121,6 @@ main h1 {
 
 .tabela-servicos th, .tabela-servicos td {
     padding: 8px;
-    
     border: 1px solid black;
     text-align: center;
 }
@@ -139,8 +139,8 @@ footer p {
 }
 
 footer img {
-    width: 70%;
-    height: 60%;
+    max-width: 70%;
+    max-height: 60%;
 }
 
 @media (max-width: 800px) {
@@ -170,8 +170,8 @@ footer img {
     }
 
     .info {
-        height: 40%;
-        width: 85vw;
+        height: auto;
+        width: 85%;
         flex-direction: row;
         align-items: baseline;
         gap: 20px;
@@ -190,7 +190,17 @@ footer img {
     }
 
     .recibo {
-       width: 87vw;
+       height: auto;
+       width: 88%;
        border-radius: 0px 0px 20px 20px;
+       margin-bottom: 20px;
+    }
+
+    main h1 {
+        max-width: 95%;
+    }
+
+    .tabela-servicos th, .tabela-servicos td {
+        font-size: .8rem;
     }
 }
