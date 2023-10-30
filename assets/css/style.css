@@ -190,7 +190,7 @@ footer img {
     }
 
     .recibo {
-       height: auto;
+       height: 100%;
        width: 88%;
        border-radius: 0px 0px 20px 20px;
        margin-bottom: 20px;
